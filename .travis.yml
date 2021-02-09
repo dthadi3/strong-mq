@@ -4,5 +4,13 @@ arch:
 os: linux
 language: node_js
 node_js:
-  - 'node'
-  - 'lts/*'
+#  - 'node' "not supported"
+#  - 'lts/*'  "not supported"
+  - '0.12'
+  - '0.10'
+jobs:
+  exclude:
+    - node_js: node
+      arch: ppc64le
+    - node_js: lts/*
+      arch: ppc64le
